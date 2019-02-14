@@ -5,10 +5,10 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1550115994.4750266
+_modified_time = 1550116025.0933084
 _enable_loop = True
-_template_filename = '/home/eric/Documents/bchain/homepage/templates/index.html'
-_template_uri = 'index.html'
+_template_filename = '/home/eric/Documents/bchain/homepage/templates/retailer.html'
+_template_uri = 'retailer.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 import django.utils.html
@@ -38,7 +38,6 @@ def render_body(context,**pageargs):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\n\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -50,7 +49,7 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         __M_writer = context.writer()
-        __M_writer('\n    <div class="content">\n        <a href="/producer/">Producer</a>\n        <a href="/manufacturer/">Manufacturer</a>\n        <a href="/distributor/">Distributor</a>\n        <a href="/retailer/">Retailer</a>\n        <a href="/shipper/">Shipper</a>\n    </div>\n')
+        __M_writer('\n    <div class="content">\n        \n    </div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -58,6 +57,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/home/eric/Documents/bchain/homepage/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"29": 0, "36": 1, "41": 11, "47": 3, "53": 3, "59": 53}}
+{"filename": "/home/eric/Documents/bchain/homepage/templates/retailer.html", "uri": "retailer.html", "source_encoding": "utf-8", "line_map": {"29": 0, "36": 1, "46": 3, "52": 3, "58": 52}}
 __M_END_METADATA
 """
