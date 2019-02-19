@@ -8,17 +8,46 @@
 
         ## add any site-wide scripts or CSS here; for example, jquery:
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      	<link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/main.css" />
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/noscript.css" />
 
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/breakpoints.min.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/browser.min.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/jquery.min.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/jquery.scrollex.min.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/jquery.scrolly.min.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/main.js"></script>
+        <script src="${ STATIC_URL }/homepage/media/assets/js/util.js"></script>
         ${ django_mako_plus.links(self) }
 
     </head>
     <body>
 
         <header>
-            <img src="${ STATIC_URL }homepage/media/python.png" alt="python" />
-            <div class="title">Welcome to <br/> DMP!</div>
+            <!-- Header -->
+              <header id="header" class="alt">
+                <h1><a href="index.html">Spectral</a></h1>
+                <nav id="nav">
+                  <ul>
+                    <li class="special">
+                      <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                      <div id="menu">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="generic.html">Generic</a></li>
+                          <li><a href="elements.html">Elements</a></li>
+                          <li><a href="#">Sign Up</a></li>
+                          <li><a href="#">Log In</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+
         </header>
 
         <main>
@@ -28,8 +57,13 @@
         </main>
 
         <footer>
-            <div><a href="http://django-mako-plus.readthedocs.io/">Online Documentation</a></div>
-            <div><a href="https://github.com/doconix/django-mako-plus/">DMP on GitHub</a></div>
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </footer>
 
     </body>

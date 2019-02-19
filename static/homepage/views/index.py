@@ -12,3 +12,8 @@ def process_request(request):
         jscontext('utc_epoch'): utc_time.timestamp(),
     }
     return request.dmp.render('index.html', context)
+
+'''
+notes:
+how do we assure that quality isn't made up? do we have multiple parties examine grade?
+'''
