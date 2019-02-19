@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    color: #777788;
+    color: #C0CAAD;
 }
 
 .clearfix {
@@ -10,7 +10,7 @@ html, body {
 }
 
 header {
-    padding: 50px 20px;
+    padding: 0px;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ header img {
 
 main {
     margin: 0;
-    padding: 15px;
+    padding: 0px;
 }
 
 footer {
@@ -41,6 +41,6 @@ footer {
 
 footer a {
     display: inline-block;
-    color: #777788;
+    color: #C0CAAD;
     margin: 15px 10% 0 0;
 }

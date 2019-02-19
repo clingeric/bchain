@@ -1,3 +1,19 @@
+venv/
+*.pyc
+*.pyo
+__pycache__/
+.cached_templates/
+db.sqlite3
+.sass-cache/
+*.htm.py
+*.html.py
+.tmp.drivedownload/*
+*.driveupload
+desktop.ini
+.vscode/
+.DS_Store
+
+#migrations/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
