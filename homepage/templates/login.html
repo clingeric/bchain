@@ -1,7 +1,12 @@
-<%inherit files="base.html" />
+<%inherit file="base.htm" />
 
 <%block name="content">
 
-${form}
+<form action="POST">
+    <label>Username:</label>
+    <input type="text">
+    <label>Password:</label>
+    <input type="password">
+</form>
 
 </%block>

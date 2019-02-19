@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1550115709.1338453
+_modified_time = 1550613786.499449
 _enable_loop = True
 _template_filename = '/home/eric/Documents/bchain/homepage/templates/producer.html'
 _template_uri = 'producer.html'
@@ -49,7 +49,7 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         __M_writer = context.writer()
-        __M_writer('\n    <div class="content">\n        \n    </div>\n')
+        __M_writer('\n    <div class="content">\n\n    </div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
