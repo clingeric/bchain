@@ -2,12 +2,43 @@
 
 <%block name="content">
 
-<div>
-  <div id="page-wrapper">
-    <div class="login">
-    ${form | n}
-      </div>
-    </div>
-</div>
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<body class="landing is-preload">
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
 
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Log In</h2>
+							</header>
+							<!--however you submit data to the blockchain-->
+
+							${form | n}
+
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
 </%block>

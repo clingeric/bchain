@@ -11,6 +11,8 @@
       	<link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/main.css" />
         <link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/font-awesome.min.css" />
         <link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/noscript.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
@@ -22,6 +24,8 @@
         <script src="${ STATIC_URL }/homepage/media/assets/js/main.js"></script>
         <script src="${ STATIC_URL }/homepage/media/assets/js/util.js"></script>
         ${ django_mako_plus.links(self) }
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </head>
     <body>

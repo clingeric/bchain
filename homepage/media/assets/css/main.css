@@ -2394,7 +2394,6 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 3px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #fff;
 		color: #fff;
 		cursor: pointer;
 		display: inline-block;
@@ -2926,7 +2925,6 @@ input, select, textarea {
 			.wrapper.style1 input[type="button"],
 			.wrapper.style1 button,
 			.wrapper.style1 .button {
-				box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.125);
 				color: #ffffff;
 			}
 
@@ -2959,7 +2957,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #2F1731;
+			background-color: #3A293D;
 			color: #d3d4e4;
 		}
 
@@ -3013,7 +3011,7 @@ input, select, textarea {
 
 				.wrapper.style3 select option {
 					color: #ffffff;
-					background: #2F1731;
+					background: #3A293D;
 				}
 
 			.wrapper.style3 input[type="checkbox"] + label,
@@ -3029,7 +3027,7 @@ input, select, textarea {
 			.wrapper.style3 input[type="checkbox"]:checked + label:before,
 			.wrapper.style3 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #2F1731;
+				color: #3A293D;
 			}
 
 			.wrapper.style3 ::-webkit-input-placeholder {
