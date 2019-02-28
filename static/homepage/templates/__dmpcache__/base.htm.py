@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1550266707.679732
+_modified_time = 1551137073.9199545
 _enable_loop = True
-_template_filename = '/Users/nicoletucker/Dev/bchain/homepage/templates/base.htm'
+_template_filename = '/home/eric/Documents/bchain/homepage/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
@@ -19,12 +19,12 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         self = context.get('self', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n\n        <title>DMP</title>\n\n')
+        __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n\n        <title>Crop Chain</title>\n\n')
         __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\n      \t<link rel="stylesheet" href="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
         __M_writer('homepage/media/assets/css/main.css" />\n        <link rel="stylesheet" href="')
@@ -53,7 +53,7 @@ def render_body(context,**pageargs):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\n        </main>\n\n        <footer>\n            <div id="google_translate_element"></div>\n            <script type="text/javascript">\n                function googleTranslateElementInit() {\n                    new google.translate.TranslateElement({ pageLanguage: \'en\', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, \'google_translate_element\');\n                }\n            </script>\n            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>\n        </footer>\n\n    </body>\n</html>\n')
+        __M_writer('\n        </main>\n\n        <footer id="footer">\n  \t\t\t\t\t\t<ul class="icons">\n  \t\t\t\t\t\t\t<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>\n  \t\t\t\t\t\t\t<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>\n  \t\t\t\t\t\t\t<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>\n  \t\t\t\t\t\t\t<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>\n  \t\t\t\t\t\t\t<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>\n  \t\t\t\t\t\t</ul>\n  \t\t\t\t\t\t<ul class="copyright">\n  \t\t\t\t\t\t\t<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>\n  \t\t\t\t\t\t</ul>\n              <div id="google_translate_element"></div>\n\n            <script type="text/javascript">\n                function googleTranslateElementInit() {\n                    new google.translate.TranslateElement({ pageLanguage: \'en\', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, \'google_translate_element\');\n                }\n            </script>\n            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>\n        </footer>\n\n    </body>\n</html>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -73,6 +73,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/nicoletucker/Dev/bchain/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 0, "27": 2, "28": 10, "29": 11, "30": 11, "31": 12, "32": 12, "33": 13, "34": 13, "35": 16, "36": 17, "37": 17, "38": 18, "39": 18, "40": 19, "41": 19, "42": 20, "43": 20, "44": 21, "45": 21, "46": 22, "47": 22, "48": 23, "49": 23, "50": 24, "51": 24, "56": 56, "62": 54, "68": 54, "74": 68}}
+{"filename": "/home/eric/Documents/bchain/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 0, "27": 2, "28": 10, "29": 11, "30": 11, "31": 12, "32": 12, "33": 13, "34": 13, "35": 16, "36": 17, "37": 17, "38": 18, "39": 18, "40": 19, "41": 19, "42": 20, "43": 20, "44": 21, "45": 21, "46": 22, "47": 22, "48": 23, "49": 23, "50": 24, "51": 24, "56": 56, "62": 54, "68": 54, "74": 68}}
 __M_END_METADATA
 """

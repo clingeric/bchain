@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <head>
 
-        <title>DMP</title>
+        <title>Crop Chain</title>
 
         ## add any site-wide scripts or CSS here; for example, jquery:
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       	<link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/main.css" />
         <link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/font-awesome.min.css" />
         <link rel="stylesheet" href="${ STATIC_URL }homepage/media/assets/css/noscript.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
@@ -22,6 +24,8 @@
         <script src="${ STATIC_URL }/homepage/media/assets/js/main.js"></script>
         <script src="${ STATIC_URL }/homepage/media/assets/js/util.js"></script>
         ${ django_mako_plus.links(self) }
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </head>
     <body>
@@ -56,8 +60,19 @@
             </%block>
         </main>
 
-        <footer>
-            <div id="google_translate_element"></div>
+        <footer id="footer">
+  						<ul class="icons">
+  							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+  							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+  							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+  							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+  							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+  						</ul>
+  						<ul class="copyright">
+  							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+  						</ul>
+              <div id="google_translate_element"></div>
+
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');

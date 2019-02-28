@@ -26,7 +26,7 @@ SECRET_KEY = '3sgkxdcu8q!zaojk7s4+3gus*^(*_dkm=6y#cs3doxpls^6a=&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bchain-dev.us-west-2.elasticbeanstalk.com', 'localhost']
+ALLOWED_HOSTS = ['bchain-dev.us-west-2.elasticbeanstalk.com', 'localhost', '127.0.0.1', 'www.crop-chain.tech']
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_mako_plus',
     'homepage',
+    'formlib',
 ]
 
 MIDDLEWARE = [
