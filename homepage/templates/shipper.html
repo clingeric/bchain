@@ -14,11 +14,11 @@
 			<div id="page-wrapper">
 
 				<!-- One -->
-				% if 'incomingAnimals' in incoming:
+				% if incoming['incomingAnimals']:
 				<section id="one" class="wrapper style1 special">
 					<div class="inner">
 						<header class="major">
-							<h2>Incoming Products</h2>
+							<h2>Shipper's Incoming Products</h2>
 						</header>
 						<table class="table">
 						<thead>
@@ -45,11 +45,11 @@
 				</section>
 				% endif
 
-				% if current:
-				<section class="wrapper style1 special">
+				% if current[0]['owner'] == 'resource:edu.byu.Farmer#SHIPPER_1':
+				<section class="wrapper style1 special" style="height: 100vh;">
 					<div class="inner">
 						<header class="major">
-							<h2>Current Products</h2>
+							<h2>Shipper's Current Products</h2>
 						</header>
 						<table class="table">
 						<thead>
