@@ -1,5 +1,6 @@
 from django.conf import settings
 from django_mako_plus import view_function, jscontext
+from django.http import HttpResponseRedirect
 import requests
 
 @view_function
@@ -18,7 +19,7 @@ def receiveproduct(request):
 
     url = "http://148.100.87.242:3000/api/edu.byu.AnimalMovementArrival"
 
-    payload = "animal=ANIMAL_1&to=BUS_MANUFACTURER_1&from=BUS_PRODUCER_1&undefined="
+    payload = "animal=ANIMAL_1&to=BUS_MANUFACTURER_1&from=BUS_PRODUCER_1"
     headers = {
         'Content-Type': "application/x-www-form-urlencoded",
         'cache-control': "no-cache",
@@ -27,13 +28,15 @@ def receiveproduct(request):
 
     response = requests.request("POST", url, data=payload, headers=headers)
 
+    return HttpResponseRedirect('/manufacturer')
+
 @view_function
 def sendproduct(request):
 
     
     url = "http://148.100.87.242:3000/api/edu.byu.AnimalMovementDeparture"
 
-    payload = "animal=ANIMAL_1&from=BUS_MANUFACTURER_1&to=BUS_SHIPPER_1&undefined="
+    payload = "animal=ANIMAL_1&from=BUS_MANUFACTURER_1&to=BUS_SHIPPER_1"
     headers = {
         'Content-Type': "application/x-www-form-urlencoded",
         'cache-control': "no-cache",
@@ -41,6 +44,8 @@ def sendproduct(request):
         }
 
     response = requests.request("POST", url, data=payload, headers=headers)
+
+    return HttpResponseRedirect('/shipper')
 
 # def receive_asset():
 '''
