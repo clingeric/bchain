@@ -1,0 +1,97 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<body class="landing is-preload">
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Shipper's Items</h2>
+							</header>
+              <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--include python for loop here to populate orders chronologically-->
+                <tr>
+                  <th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
+                  <td class="item">Cow 1</td> <!--##dynamic mako to include the item or what not-->
+
+										<td>
+										<!--If item is not recieve:-->
+                  	<a href="" class="button primary">&#8681; Receive</a><!--## button updates blockchain that item was recieved-->
+										<!--end if-->
+
+										<!--If item has been recieved but needs to be sent-->
+                  	<!--<a href="" class="button secondary">Send &#8679;</a> button updates blockchain that item was sent-->
+										<!--end if-->
+										</td>
+                </tr>
+
+								<tr>
+                  <th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
+                  <td class="item">Cow 2</td> <!--##dynamic mako to include the item or what not-->
+
+										<td>
+										<!--If item is not recieve:-->
+										<!--<a href="" class="button primary"> &#8681; Receive</a><!--button updates blockchain that item was recieved-->
+										<!--end if-->
+
+										<!--If item has been recieved but needs to be sent-->
+										<a href="" class="button secondary">Send &#8679;</a> <!--button updates blockchain that item was sent-->
+										<!--end if-->
+										</td>
+                </tr>
+
+								<tr>
+									<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
+									<td class="item">Cow 3</td> <!--##dynamic mako to include the item or what not-->
+
+										<td>
+										<!--If item is not recieve:-->
+										<!--<a href="" class="button primary"> &#8681; Receive</a><!--button updates blockchain that item was recieved-->
+										<!--end if-->
+
+										<!--If item has been recieved but needs to be sent-->
+										<a href="" class="button secondary">Send &#8679;</a> <!--button updates blockchain that item was sent-->
+										<!--end if-->
+										</td>
+								</tr>
+                <!--endfor-->
+
+              </tbody>
+            </table>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+</%block>

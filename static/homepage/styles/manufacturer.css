@@ -1,0 +1,20 @@
+main {
+    text-align: center;
+}
+
+h4.utc-time {
+    color: #3771A1;
+}
+
+#banner {
+  min-height: 30em;
+  height: 30em;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
+}
+
+#one {
+  height: 100vh;
+}

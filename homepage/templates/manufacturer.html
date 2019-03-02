@@ -1,7 +1,119 @@
 <%inherit file="base.htm" />
 
 <%block name="content">
-    <div class="content">
-        
-    </div>
+
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<body class="landing is-preload">
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				% if incoming['incomingAnimals']:
+				<!-- One -->
+				<section id="one" class="wrapper style1 special">
+					<div class="inner">
+						<header class="major">
+							<h2>Manufacturer's Incoming Products</h2>
+						</header>
+						<table class="table">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">ID</th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--include python for loop here to populate orders chronologically-->
+							% for item in incoming['incomingAnimals']:
+							<tr>
+								<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
+								<td class="item">${item}</td> <!--##dynamic mako to include the item or what not-->
+								<td class="item"><a href="/manufacturer.receiveproduct" class="button primary">&#8681; Receive</a></td>
+							</tr>
+							% endfor
+						</tbody>
+					</table>
+
+					</div>
+				</section>
+				% endif
+
+				% if current[0]['owner'] == 'resource:edu.byu.Farmer#MANUFACTURER_1':
+				<section class="wrapper style1 special" style="height: 100vh;">
+					<div class="inner">
+						<header class="major">
+							<h2>Manufacturer's Current Products</h2>
+						</header>
+						<table class="table">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">ID</th>
+								<th scope="col">Owner</th>
+								<th scope="col">Type</th>
+								<th scope="col">Status</th>
+								<th scope="col">Grade</th>
+								<th scope="col">Amount</th>
+								<th scope="col">Organic</th>
+								<th scope="col">Fair Trade</th>
+								<th scope="col">Non-Child Labor</th>
+								<th scope="col"></th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--include python for loop here to populate orders chronologically-->
+							% for item in current:
+							% if item['owner'] == 'resource:edu.byu.Farmer#MANUFACTURER_1':
+							<tr>
+								<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
+								<td class="item">${item['animalId']}</td> <!--##dynamic mako to include the item or what not-->
+								<td class="item">Manufacturer</td>
+								<td class="item">${item['species']} </td>	
+								<td class="item">${item['movementStatus']} </td>
+								% if 'grade' in item:
+								<td class="item">${item['grade']} </td>	
+								% else:
+								<td class="item"></td>
+								% endif
+								% if 'amount' in item:
+								<td class="item">${item['amount']} </td>
+								% else:
+								<td class="item"></td>
+								% endif
+								<td class="item">${item['organic']} </td>	
+								<td class="item">${item['fairTrade']} </td>	
+								<td class="item">${item['nonchildLabor']} </td>	
+								<td>
+									<a href="/manufacturer.sendproduct" class="button secondary">Send &#8679;</a>
+								</td>
+							</tr>
+							% endif
+							% endfor
+							</tr>
+						</tbody>
+					</table>
+
+					</div>
+				</section>
+				% endif
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
 </%block>

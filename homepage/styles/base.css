@@ -34,7 +34,6 @@ main {
 }
 
 footer {
-    margin-top: 40px;
     border-top: 1px solid #CCCCCC;
     text-align: right;
 }
@@ -42,5 +41,15 @@ footer {
 footer a {
     display: inline-block;
     color: #C0CAAD;
-    margin: 15px 10% 0 0;
+    margin: 0px 0 0 0;
+}
+
+.button.secondary {
+  background-color: #32516A  !important;
+  border: none;
+}
+
+
+.button.secondary:hover {
+  background-color: #29343D !important;
 }
