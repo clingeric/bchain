@@ -12,13 +12,13 @@ def process_request(request):
 
     if form.is_valid():
         # form.commit()
-        if(form.username == 'producer'):
+        if(form.username == 'James'):
             return HttpResponseRedirect('/producer')
-        elif(form.username == 'manufacturer'):
+        elif(form.username == 'Melisa'):
             return HttpResponseRedirect('/manufacturer')
-        elif(form.username == 'distributor'):
+        elif(form.username == 'Leroy'):
             return HttpResponseRedirect('/distributor')
-        elif(form.username == 'shipper'):
+        elif(form.username == 'Michelle'):
             return HttpResponseRedirect('/shipper')
         elif(form.username == 'retailer'):
             return HttpResponseRedirect('/retailer')

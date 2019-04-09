@@ -18,13 +18,13 @@
 				<section id="one" class="wrapper style1 special">
 					<div class="inner">
 						<header class="major">
-							<h2>Manufacturer's Incoming Products</h2>
+							<h2>Melisa T. Perez' Incoming Products</h2>
 						</header>
 						<table class="table">
 						<thead>
 							<tr>
-								<th scope="col"></th>
 								<th scope="col">ID</th>
+								<th scope="col"></th>
 								<th scope="col"></th>
 							</tr>
 						</thead>
@@ -32,8 +32,8 @@
 							<!--include python for loop here to populate orders chronologically-->
 							% for item in incoming['incomingAnimals']:
 							<tr>
-								<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
-								<td class="item">${item}</td> <!--##dynamic mako to include the item or what not-->
+								<th scope="item">1</th><!--##dynamic mako to include the item number or what not-->
+								<td class="item">${item[-8:]}</td> <!--##dynamic mako to include the item or what not-->
 								<td class="item"><a href="/manufacturer.receiveproduct" class="button primary">&#8681; Receive</a></td>
 							</tr>
 							% endfor
@@ -48,7 +48,7 @@
 				<section class="wrapper style1 special" style="height: 100vh;">
 					<div class="inner">
 						<header class="major">
-							<h2>Manufacturer's Current Products</h2>
+							<h2>Melisa T. Perez' Current Products</h2>
 						</header>
 						<table class="table">
 						<thead>
@@ -74,9 +74,13 @@
 							<tr>
 								<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
 								<td class="item">${item['animalId']}</td> <!--##dynamic mako to include the item or what not-->
-								<td class="item">Manufacturer</td>
+								<td class="item">Melisa T. Perez</td>
 								<td class="item">${item['species']} </td>	
-								<td class="item">${item['movementStatus']} </td>
+								% if item['movementStatus'] == 'IN_POSSESSION':
+								<td class="item"> In Possession </td>
+								% else:
+								<td class="item"> In Transit </td>
+								% endif
 								% if 'grade' in item:
 								<td class="item">${item['grade']} </td>	
 								% else:
