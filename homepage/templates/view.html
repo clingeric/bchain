@@ -17,7 +17,7 @@
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Producer's Products</h2>
+								<h2>James R. Beach's Products</h2>
 							</header>
               <table class="table">
               <thead>
@@ -25,7 +25,7 @@
 									<th scope="col"></th>
 									<th scope="col">ID</th>
 									<th scope="col">Owner</th>
-                  					<th scope="col">Type</th>
+                  <th scope="col">Type</th>
 									<th scope="col">Status</th>
 									<th scope="col">Grade</th>
 									<th scope="col">Amount</th>
@@ -43,15 +43,11 @@
 								<tr>
                   <th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
 									<td class="item">${item['animalId']}</td> <!--##dynamic mako to include the item or what not-->
-									<td class="item">${item['owner']}</td>
+									<td class="item">James R. Beach</td>
 									<td class="item">${item['species']} </td>	
 									<td class="item">${item['movementStatus']} </td>
-									% if 'grade' in item:
 									<td class="item">${item['grade']} </td>	
-									% else:
 									<td class="item"></td>
-									% endif
-									% if 'amount' in item:
 									<td class="item">${item['amount']} </td>
 									% else:
 									<td class="item"></td>
