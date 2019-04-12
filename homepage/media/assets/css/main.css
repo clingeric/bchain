@@ -163,8 +163,8 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
-		font-weight: 800;
+		color: #fff !important;
+		font-weight: 800 !important;
 		letter-spacing: 0.225em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -177,7 +177,7 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.35em;
+		font-size: 2.75em !important;
 		line-height: 1.75em;
 	}
 
@@ -2770,7 +2770,7 @@ input, select, textarea {
 	}
 
 		.wrapper > .inner {
-			width: 60em;
+			width: 80em;
 			margin: 0 auto;
 		}
 
@@ -3571,7 +3571,7 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			display: inline-block;
-			font-size: 1.75em;
+			font-size: 2.5em;
 			opacity: 1;
 			padding: 0.35em 1em;
 			position: relative;
@@ -3691,6 +3691,7 @@ input, select, textarea {
 
 				#banner h2 {
 					font-size: 1.25em;
+
 				}
 
 				#banner br {

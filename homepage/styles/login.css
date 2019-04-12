@@ -10,3 +10,25 @@ h4.utc-time {
   height: 100vh;
   background-color: #83781B;
 }
+
+.btn-primary {
+  background-color: #32516A  !important;
+  border: none;
+  margin: 2.7em;
+  height: 5.23em;
+  width: 12em;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background-color: #29343D !important;
+  border: none;
+}
+
+.header {
+  /* vertical-align: middle; */
+}
+
+h2 {
+  /* padding-bottom: 0px !important; */
+}

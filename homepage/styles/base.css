@@ -53,3 +53,16 @@ footer a {
 .button.secondary:hover {
   background-color: #29343D !important;
 }
+
+.medium {
+  height: 4.23em;
+  width: 8em;
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+ul.actions li {
+  padding-left: 5em;
+  /* margin-top: 20px; */
+}
