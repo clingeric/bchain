@@ -18,3 +18,17 @@ h4.utc-time {
 #one {
   height: 100vh;
 }
+
+.large {
+  height: 6.23em;
+  width: 13em;
+  /* margin: 4em !important; */
+  /* padding-top: 1em;
+  padding-bottom: 1em; */
+  display: table-cell;
+  vertical-align: middle;
+}
+
+ul.actions li {
+  padding-left: 5em;
+}

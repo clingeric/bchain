@@ -25,7 +25,7 @@ a:focus, a:hover {
 }
 
 a:focus {
-    text-decoration: underline;
+    /* text-decoration: none; */
 }
 
 a img {
@@ -38,7 +38,7 @@ a.section:link, a.section:visited {
 }
 
 a.section:focus, a.section:hover {
-    text-decoration: underline;
+    /* text-decoration: none; */
 }
 
 /* GLOBAL DEFAULTS */
@@ -595,7 +595,7 @@ ul.errorlist li:first-child {
 
 ul.errorlist li a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 td ul.errorlist {
@@ -840,7 +840,7 @@ table#change-history tbody th {
 }
 
 #header a:focus , #header a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #branding {

@@ -5,3 +5,21 @@ main {
 h4.utc-time {
     color: #3771A1;
 }
+
+.header {
+  font-size: 7em !important;
+}
+
+.medium {
+  height: 5.23em;
+  width: 12em;
+}
+
+ul.actions li {
+  padding-left: 5em;
+  margin-top: 25px;
+}
+
+p {
+  font-size: 1.6em !important;
+}
