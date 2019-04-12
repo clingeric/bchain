@@ -13,74 +13,100 @@
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
+				% if incoming['incomingAnimals']:
 				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Manufacturer's Items</h2>
-							</header>
-              <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Item</th>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <!--include python for loop here to populate orders chronologically-->
-                <tr>
-                  <th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
-                  <td class="item">Cow 1</td> <!--##dynamic mako to include the item or what not-->
+				<section id="one" class="wrapper style1 special">
+					<div class="inner">
+						<header class="major">
+							<h2>Melisa T. Perez' Incoming Products</h2>
+						</header>
+						<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col"></th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--include python for loop here to populate orders chronologically-->
+							% for item in incoming['incomingAnimals']:
+							<tr>
+								<th scope="item">1</th><!--##dynamic mako to include the item number or what not-->
+								<td class="item">${item[-8:]}</td> <!--##dynamic mako to include the item or what not-->
+								<td class="item"><a href="/manufacturer.receiveproduct" class="button medium primary">&#8681; Receive</a></td>
+							</tr>
+							% endfor
+						</tbody>
+					</table>
 
-										<td>
-										<!--If item is not recieve:-->
-                  	<a href="" class="button primary">&#8681; Receive</a><!--## button updates blockchain that item was recieved-->
-										<!--end if-->
+					</div>
+				</section>
+				% endif
 
-										<!--If item has been recieved but needs to be sent-->
-                  	<!--<a href="" class="button secondary">Send &#8679;</a> button updates blockchain that item was sent-->
-										<!--end if-->
-										</td>
-                </tr>
+				% if current[0]['owner'] == 'resource:edu.byu.Farmer#MANUFACTURER_1':
+				<section class="wrapper style1 special" style="height: 100vh;">
+					<div class="inner">
+						<header class="major">
+							<h2>Melisa T. Perez' Current Products</h2>
+						</header>
+						<table class="table">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">ID</th>
+								<th scope="col">Owner</th>
+								<th scope="col">Type</th>
+								<th scope="col">Status</th>
+								<th scope="col">Grade</th>
+								<th scope="col">Amount</th>
+								<th scope="col">Organic</th>
+								<th scope="col">Fair Trade</th>
+								<th scope="col">Non-Child Labor</th>
+								<th scope="col"></th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--include python for loop here to populate orders chronologically-->
+							% for item in current:
+							% if item['owner'] == 'resource:edu.byu.Farmer#MANUFACTURER_1':
+							<tr>
+								<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
+								<td class="item">${item['animalId']}</td> <!--##dynamic mako to include the item or what not-->
+								<td class="item">Melisa T. Perez</td>
+								<td class="item">${item['species']} </td>
+								% if item['movementStatus'] == 'IN_POSSESSION':
+								<td class="item"> In Possession </td>
+								% else:
+								<td class="item"> In Transit </td>
+								% endif
+								% if 'grade' in item:
+								<td class="item">${item['grade']} </td>
+								% else:
+								<td class="item"></td>
+								% endif
+								% if 'amount' in item:
+								<td class="item">${item['amount']} </td>
+								% else:
+								<td class="item"></td>
+								% endif
+								<td class="item">${item['organic']} </td>
+								<td class="item">${item['fairTrade']} </td>
+								<td class="item">${item['nonchildLabor']} </td>
+								<td>
+									<a href="/manufacturer.sendproduct" class="button medium secondary">Send &#8679;</a>
+								</td>
+							</tr>
+							% endif
+							% endfor
+							</tr>
+						</tbody>
+					</table>
 
-								<tr>
-                  <th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
-                  <td class="item">Cow 2</td> <!--##dynamic mako to include the item or what not-->
-
-										<td>
-										<!--If item is not recieve:-->
-										<!--<a href="" class="button primary"> &#8681; Receive</a><!--button updates blockchain that item was recieved-->
-										<!--end if-->
-
-										<!--If item has been recieved but needs to be sent-->
-										<a href="" class="button secondary">Send &#8679;</a> <!--button updates blockchain that item was sent-->
-										<!--end if-->
-										</td>
-                </tr>
-
-								<tr>
-									<th scope="row">1</th><!--##dynamic mako to include the item number or what not-->
-									<td class="item">Cow 3</td> <!--##dynamic mako to include the item or what not-->
-
-										<td>
-										<!--If item is not recieve:-->
-										<!--<a href="" class="button primary"> &#8681; Receive</a><!--button updates blockchain that item was recieved-->
-										<!--end if-->
-
-										<!--If item has been recieved but needs to be sent-->
-										<a href="" class="button secondary">Send &#8679;</a> <!--button updates blockchain that item was sent-->
-										<!--end if-->
-										</td>
-								</tr>
-                <!--endfor-->
-
-              </tbody>
-            </table>
-
-						</div>
-					</section>
-
+					</div>
+				</section>
+				% endif
 			</div>
 
 		<!-- Scripts -->
